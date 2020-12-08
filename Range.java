@@ -27,4 +27,14 @@ public class Range implements IntegerSequence{
     else
     return false;
   }
+
+  public int next() throws NoSuchElementException{
+    if(this.hasNext()){
+      int place = this.current;
+      current += 1;
+      return place;
+    }
+    else
+    throw new NoSuchElementException("There is no 'next' value.");
+  }
 }
