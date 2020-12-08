@@ -11,4 +11,20 @@ public class Range implements IntegerSequence{
     this.end = end;
     this.current = start;
   }
+
+  public void reset(){
+    this.current = this.start;
+  }
+
+  public int length(){
+    return (Math.abs(this.end - this.start) + 1);
+  }
+
+  public boolean hasNext(){
+    if(current <= this.end){
+      return true;
+    }
+    else
+    return false;
+  }
 }
